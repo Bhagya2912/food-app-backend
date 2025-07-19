@@ -31,3 +31,8 @@ router.post('/placeorder',authMiddleware,placeOrderController);
 router.post('/orderstatus/:id',authMiddleware,adminMiddleware,orderStatusController);
 
 export default router;
+
+// default route for testing
+router.get('/', (req, res) => {
+  res.send('Food API is working!');
+});
